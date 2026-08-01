@@ -251,11 +251,13 @@
       "id": "tosnene",
       "geometry": {
         "type": "Point",
-        "coordinates": [0, 0]
+        "coordinates": [-96.9236, 19.5438]
       },
       "properties": {
         "name": "Tosnene",
         "address": null,
+        "locationPrecision": "city",
+        "serviceArea": "Xalapa, Veracruz",
         "materials": [
           "frascos-vidrio"
         ],
@@ -293,11 +295,14 @@
       "id": "hagamos-composta-xalapa",
       "geometry": {
         "type": "Point",
-        "coordinates": [0, 0]
+        "coordinates": [-96.9236, 19.5438]
       },
       "properties": {
         "name": "Hagamos Composta Xalapa",
         "address": null,
+        "locationPrecision": "city",
+        "serviceArea": "Xalapa, Veracruz",
+        "serviceMode": "pickup",
         "materials": [
           "materia-organica"
         ],
