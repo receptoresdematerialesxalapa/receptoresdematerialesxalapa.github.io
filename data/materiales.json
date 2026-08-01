@@ -1,0 +1,127 @@
+[
+  {
+    "id": "aceite-cocina-usado",
+    "name": "Aceite de cocina usado",
+    "category": "Aceites"
+  },
+  {
+    "id": "archivo-blanco",
+    "name": "Papel blanco de archivo",
+    "category": "Papel y cartón"
+  },
+  {
+    "id": "archivo-muerto",
+    "name": "Papel de archivo para descarte",
+    "category": "Papel y cartón"
+  },
+  {
+    "id": "baterias-automovil",
+    "name": "Baterías de automóvil",
+    "category": "Residuos peligrosos"
+  },
+  {
+    "id": "botellas-vidrio",
+    "name": "Botellas de vidrio",
+    "category": "Vidrio"
+  },
+  {
+    "id": "carton-cajas",
+    "name": "Cartón de cajas",
+    "category": "Papel y cartón"
+  },
+  {
+    "id": "celulares",
+    "name": "Teléfonos celulares",
+    "category": "Residuos eléctricos y electrónicos"
+  },
+  {
+    "id": "componentes-computadora",
+    "name": "Componentes de computadora",
+    "category": "Residuos eléctricos y electrónicos"
+  },
+  {
+    "id": "cd-dvd",
+    "name": "Discos CD y DVD",
+    "category": "Residuos eléctricos y electrónicos"
+  },
+  {
+    "id": "electrodomesticos",
+    "name": "Electrodomésticos",
+    "category": "Residuos eléctricos y electrónicos"
+  },
+  {
+    "id": "electronicos",
+    "name": "Aparatos electrónicos",
+    "category": "Residuos eléctricos y electrónicos"
+  },
+  {
+    "id": "frascos-vidrio",
+    "name": "Frascos de vidrio",
+    "category": "Vidrio"
+  },
+  {
+    "id": "lamparas-fluorescentes",
+    "name": "Lámparas fluorescentes y bombillas",
+    "category": "Residuos peligrosos"
+  },
+  {
+    "id": "materia-organica",
+    "name": "Materia orgánica",
+    "category": "Residuos orgánicos"
+  },
+  {
+    "id": "monitores-pantallas",
+    "name": "Monitores y pantallas",
+    "category": "Residuos eléctricos y electrónicos"
+  },
+  {
+    "id": "papel-periodico",
+    "name": "Papel periódico",
+    "category": "Papel y cartón"
+  },
+  {
+    "id": "pead-hdpe-2",
+    "name": "Plástico PEAD / HDPE (n.º 2)",
+    "category": "Plásticos"
+  },
+  {
+    "id": "pebd-ldpe-4",
+    "name": "Plástico PEBD / LDPE (n.º 4)",
+    "category": "Plásticos"
+  },
+  {
+    "id": "pet-1",
+    "name": "Plástico PET (n.º 1)",
+    "category": "Plásticos"
+  },
+  {
+    "id": "playo",
+    "name": "Película plástica para embalaje (playo)",
+    "category": "Plásticos"
+  },
+  {
+    "id": "pp-5",
+    "name": "Plástico polipropileno / PP (n.º 5)",
+    "category": "Plásticos"
+  },
+  {
+    "id": "ps-6",
+    "name": "Plástico poliestireno / PS (n.º 6)",
+    "category": "Plásticos"
+  },
+  {
+    "id": "pvc-3",
+    "name": "Plástico PVC (n.º 3)",
+    "category": "Plásticos"
+  },
+  {
+    "id": "radiadores",
+    "name": "Radiadores",
+    "category": "Metales"
+  },
+  {
+    "id": "tapas-plasticas-botellas",
+    "name": "Tapas plásticas de botellas",
+    "category": "Plásticos"
+  }
+]

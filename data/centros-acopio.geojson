@@ -1,0 +1,546 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "recolector-aceite-cocina",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0, 0]
+      },
+      "properties": {
+        "name": "Recolector de aceite de cocina (sin nombre)",
+        "address": null,
+        "materials": [
+          "aceite-cocina-usado"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": true,
+          "donation": false,
+          "other": false 
+        },
+        "schedule": {
+          "display": null,
+          "weekly": {
+            "monday": [],
+            "tuesday": [],
+            "wednesday": [],
+            "thursday": [],
+            "friday": [],
+            "saturday": [],
+            "sunday": []
+          }
+        },
+        "phone": "2283618551",
+        "email": null,
+        "social": {
+          "instagram": null,
+          "facebook": null,
+          "whatsapp": null
+        },
+        "notes": "Puede recoger el aceite a partir de 20 litros.",
+        "sourceMapUrl": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "centro-acopio-mendoza",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.5369447, -96.9245876]
+      },
+      "properties": {
+        "name": "Centro de Acopio Mendoza",
+        "address": "Francisco Javier Clavijero 239, Zona Centro, 91000 Xalapa-Enríquez, Ver.",
+        "materials": [
+          "archivo-blanco",
+          "archivo-muerto",
+          "carton-cajas",
+          "papel-periodico"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": true,
+          "donation": true,
+          "other": false
+        },
+        "schedule": {
+          "display": null,
+          "weekly": {
+            "monday": [],
+            "tuesday": [],
+            "wednesday": [],
+            "thursday": [],
+            "friday": [],
+            "saturday": [],
+            "sunday": []
+          }
+        },
+        "phone": null,
+        "email": null,
+        "social": {
+          "instagram": null,
+          "facebook": null,
+          "whatsapp": null
+        },
+        "notes": "La fuente marca compra para papel de archivo y cartón, y donación para periódico.",
+        "sourceMapUrl": "https://maps.app.goo.gl/DjLi6aNdzRtVQ7r6A"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "internacional-paper",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.548287977362076, -96.90740733013166]
+      },
+      "properties": {
+        "name": "International Paper",
+        "address": null,
+        "materials": [
+          "archivo-blanco",
+          "archivo-muerto",
+          "carton-cajas",
+          "playo"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": false,
+          "donation": false,
+          "other": false
+        },
+        "schedule": {
+          "display": null,
+          "weekly": {
+            "monday": [],
+            "tuesday": [],
+            "wednesday": [],
+            "thursday": [],
+            "friday": [],
+            "saturday": [],
+            "sunday": []
+          }
+        },
+        "phone": null,
+        "email": null,
+        "social": {
+          "instagram": null,
+          "facebook": null,
+          "whatsapp": null
+        },
+        "notes": null,
+        "sourceMapUrl": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fundacion-bizarro",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.525273108790774, -96.90021178788687]
+      },
+      "properties": {
+        "name": "Fundación Bizarro, Reciclando por un Mejor Futuro, A.C.",
+        "address": "Av. 20 de Noviembre 714, Álvaro Obregón, 91060 Xalapa-Enríquez, Ver.",
+        "materials": [
+          "baterias-automovil",
+          "celulares",
+          "componentes-computadora",
+          "cd-dvd",
+          "electrodomesticos",
+          "electronicos",
+          "lamparas-fluorescentes",
+          "monitores-pantallas",
+          "playo",
+          "radiadores"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": false,
+          "donation": true,
+          "other": false
+        },
+        "schedule": {
+          "display": "Lunes a viernes de 10:00 a 14:00 y de 16:00 a 19:00; sábado de 10:00 a 15:00; domingo cerrado",
+          "weekly": {
+            "monday": [
+              ["10:00", "14:00"],
+              ["16:00", "19:00"]
+            ],
+            "tuesday": [
+              ["10:00", "14:00"],
+              ["16:00", "19:00"]
+            ],
+            "wednesday": [
+              ["10:00", "14:00"],
+              ["16:00", "19:00"]
+            ],
+            "thursday": [
+              ["10:00", "14:00"],
+              ["16:00", "19:00"]
+            ],
+            "friday": [
+              ["10:00", "14:00"],
+              ["16:00", "19:00"]
+            ],
+            "saturday": [
+              ["10:00", "15:00"]
+            ],
+            "sunday": []
+          }
+        },
+        "phone": "2289791047",
+        "email": null,
+        "social": {
+          "instagram": "https://www.instagram.com/fundacion.bizarro/",
+          "facebook": "https://www.facebook.com/fundacion.bizarro",
+          "whatsapp": "https://wa.me/522289791047"
+        },
+        "notes": null,
+        "sourceMapUrl": "https://maps.app.goo.gl/yj9PoJid8wh54fGn8"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "centro-acopio-kotizame",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.528736096102858, -96.88807680682793]
+      },
+      "properties": {
+        "name": "Centro de Acopio Kotízame",
+        "address": "Calle Obras Públicas 13, Xalapa-Enríquez, Ver.",
+        "materials": [
+          "botellas-vidrio"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": false,
+          "donation": true,
+          "other": false
+        },
+        "schedule": {
+          "display": "Lunes a viernes de 8:00 a 20:00; sábado de 9:00 a 15:00",
+          "weekly": {
+            "monday": [["08:00", "20:00"]],
+            "tuesday": [["08:00", "20:00"]],
+            "wednesday": [["08:00", "20:00"]],
+            "thursday": [["08:00", "20:00"]],
+            "friday": [["08:00", "20:00"]],
+            "saturday": [["09:00", "15:00"]],
+            "sunday": []
+          }
+        },
+        "phone": "2283051671",
+        "email": null,
+        "social": {
+          "instagram": null,
+          "facebook": null,
+          "whatsapp": "https://wa.me/522283051671"
+        },
+        "notes": "Cuenta con una ruta mensual de recolección a domicilio; se solicita contactar por WhatsApp.",
+        "sourceMapUrl": "https://maps.app.goo.gl/biX3sJYbFLEhEZrg7"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tosnene",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0, 0]
+      },
+      "properties": {
+        "name": "Tosnene",
+        "address": null,
+        "materials": [
+          "frascos-vidrio"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": false,
+          "donation": true,
+          "other": false
+        },
+        "schedule": {
+          "display": null,
+          "weekly": {
+            "monday": [],
+            "tuesday": [],
+            "wednesday": [],
+            "thursday": [],
+            "friday": [],
+            "saturday": [],
+            "sunday": []
+          }
+        },
+        "phone": "4155664377",
+        "email": null,
+        "social": {
+          "instagram": null,
+          "facebook": null,
+          "whatsapp": null
+        },
+        "notes": "Los frascos deben estar limpios y en buen estado.",
+        "sourceMapUrl": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hagamos-composta-xalapa",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0, 0]
+      },
+      "properties": {
+        "name": "Hagamos Composta Xalapa",
+        "address": null,
+        "materials": [
+          "materia-organica"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": false,
+          "donation": false,
+          "other": true
+        },
+        "schedule": {
+          "display": "Ruta de recolección: lunes de 10:00 a 17:00",
+          "weekly": {
+            "monday": [["10:00", "17:00"]],
+            "tuesday": [],
+            "wednesday": [],
+            "thursday": [],
+            "friday": [],
+            "saturday": [],
+            "sunday": []
+          }
+        },
+        "phone": "2282679122",
+        "email": "hagamoscompostaxalapa@gmail.com",
+        "social": {
+          "instagram": "https://www.instagram.com/hc_xalapa/",
+          "facebook": null,
+          "whatsapp": null
+        },
+        "notes": "Servicio registrado como ruta de recolección, no como horario de un establecimiento fijo.",
+        "sourceMapUrl": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "reciclables-mendoza",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.533792903398748, -96.93811275756414]
+      },
+      "properties": {
+        "name": "Reciclables Mendoza",
+        "address": "Av. Adolfo Ruiz Cortines 324, Represa del Carmen, 91050 Xalapa-Enríquez, Ver.",
+        "materials": [
+          "pet-1",
+          "pead-hdpe-2",
+          "pvc-3",
+          "pebd-ldpe-4",
+          "pp-5",
+          "ps-6"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": false,
+          "donation": true,
+          "other": false
+        },
+        "schedule": {
+          "display": null,
+          "weekly": {
+            "monday": [],
+            "tuesday": [],
+            "wednesday": [],
+            "thursday": [],
+            "friday": [],
+            "saturday": [],
+            "sunday": []
+          }
+        },
+        "phone": null,
+        "email": null,
+        "social": {
+          "instagram": null,
+          "facebook": null,
+          "whatsapp": null
+        },
+        "notes": null,
+        "sourceMapUrl": "https://maps.app.goo.gl/Y8nevNrdTuptS9TKA"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "facultad-medicina",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.560160691664326, -96.93070196365886]
+      },
+      "properties": {
+        "name": "Facultad de Medicina",
+        "address": null,
+        "materials": [
+          "tapas-plasticas-botellas"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": false,
+          "donation": true,
+          "other": false
+        },
+        "schedule": {
+          "display": null,
+          "weekly": {
+            "monday": [],
+            "tuesday": [],
+            "wednesday": [],
+            "thursday": [],
+            "friday": [],
+            "saturday": [],
+            "sunday": []
+          }
+        },
+        "phone": null,
+        "email": null,
+        "social": {
+          "instagram": null,
+          "facebook": null,
+          "whatsapp": null
+        },
+        "notes": null,
+        "sourceMapUrl": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "caxa",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.5274407012927, -96.90349334076451]
+      },
+      "properties": {
+        "name": "CAXA",
+        "address": null,
+        "materials": [
+          "tapas-plasticas-botellas"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": false,
+          "donation": true,
+          "other": false
+        },
+        "schedule": {
+          "display": null,
+          "weekly": {
+            "monday": [],
+            "tuesday": [],
+            "wednesday": [],
+            "thursday": [],
+            "friday": [],
+            "saturday": [],
+            "sunday": []
+          }
+        },
+        "phone": null,
+        "email": null,
+        "social": {
+          "instagram": null,
+          "facebook": null,
+          "whatsapp": null
+        },
+        "notes": null,
+        "sourceMapUrl": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bachillerato-articulo-3-constitucional",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.46203040675153, -96.95402067370713]
+      },
+      "properties": {
+        "name": "Bachillerato Artículo 3.º Constitucional",
+        "address": null,
+        "materials": [
+          "tapas-plasticas-botellas"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": false,
+          "donation": true,
+          "other": false
+        },
+        "schedule": {
+          "display": null,
+          "weekly": {
+            "monday": [],
+            "tuesday": [],
+            "wednesday": [],
+            "thursday": [],
+            "friday": [],
+            "saturday": [],
+            "sunday": []
+          }
+        },
+        "phone": null,
+        "email": null,
+        "social": {
+          "instagram": null,
+          "facebook": null,
+          "whatsapp": null
+        },
+        "notes": null,
+        "sourceMapUrl": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "talleres-libres-arte",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.523630521485458, -96.91169936709025]
+      },
+      "properties": {
+        "name": "Talleres Libres de Arte",
+        "address": null,
+        "materials": [
+          "tapas-plasticas-botellas"
+        ],
+        "services": {
+          "barter": false,
+          "purchase": false,
+          "donation": true,
+          "other": false
+        },
+        "schedule": {
+          "display": null,
+          "weekly": {
+            "monday": [],
+            "tuesday": [],
+            "wednesday": [],
+            "thursday": [],
+            "friday": [],
+            "saturday": [],
+            "sunday": []
+          }
+        },
+        "phone": null,
+        "email": null,
+        "social": {
+          "instagram": null,
+          "facebook": null,
+          "whatsapp": null
+        },
+        "notes": null,
+        "sourceMapUrl": null
+      }
+    }
+  ]
+}
