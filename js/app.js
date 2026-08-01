@@ -30,6 +30,8 @@ const state = {
   materials: [],
   materialsById: new Map(),
   markerById: new Map(),
+  approximateMarkerLayouts: [],
+  approximateLocationIcon: null,
   userLocation: null,
   userMarker: null,
   accuracyCircle: null,
@@ -80,6 +82,14 @@ function initializeMap() {
   }).addTo(map);
 
   markerLayer = L.featureGroup().addTo(map);
+  map.on("zoomend", updateApproximateMarkerPositions);
+  state.approximateLocationIcon = L.divIcon({
+    className: "approximate-marker",
+    html: '<span aria-hidden="true">≈</span>',
+    iconSize: [34, 34],
+    iconAnchor: [17, 17],
+    popupAnchor: [0, -15],
+  });
 }
 
 function bindEvents() {
@@ -144,19 +154,79 @@ function populateMaterialFilter() {
 }
 
 function createMarkers() {
+  const approximateGroups = new Map();
+  state.approximateMarkerLayouts = [];
+
+  for (const feature of state.features) {
+    if (feature.properties.locationPrecision !== "city") continue;
+    const coordinateKey = feature.geometry.coordinates.join(",");
+    if (!approximateGroups.has(coordinateKey)) approximateGroups.set(coordinateKey, []);
+    approximateGroups.get(coordinateKey).push(feature);
+  }
+
   for (const feature of state.features) {
     const [longitude, latitude] = feature.geometry.coordinates;
-    const marker = L.marker([latitude, longitude], {
-      title: feature.properties.name,
-      alt: `Centro de acopio: ${feature.properties.name}`,
-    });
+    const isApproximate = feature.properties.locationPrecision === "city";
+    let markerPosition = L.latLng(latitude, longitude);
+
+    if (isApproximate) {
+      const coordinateKey = feature.geometry.coordinates.join(",");
+      const group = approximateGroups.get(coordinateKey) || [];
+      if (group.length > 1) {
+        const index = group.findIndex((item) => item.id === feature.id);
+        const angle = (-Math.PI / 2) + ((Math.PI * 2 * index) / group.length);
+        const layout = {
+          featureId: feature.id,
+          basePosition: L.latLng(latitude, longitude),
+          angle,
+        };
+        state.approximateMarkerLayouts.push(layout);
+        markerPosition = getSpreadMarkerPosition(layout);
+      }
+    }
+
+    const markerOptions = {
+      title: isApproximate
+        ? `${feature.properties.name} (ubicación aproximada)`
+        : feature.properties.name,
+      alt: isApproximate
+        ? `Cobertura aproximada: ${feature.properties.name}`
+        : `Centro de acopio: ${feature.properties.name}`,
+    };
+    if (isApproximate) markerOptions.icon = state.approximateLocationIcon;
+
+    const marker = L.marker(markerPosition, markerOptions);
     marker.bindPopup(buildPopup(feature), {
       minWidth: 250,
       maxWidth: 340,
       maxHeight: 420,
       autoPanPadding: [24, 24],
     });
+    if (isApproximate) {
+      marker.bindTooltip("Ubicación aproximada en Xalapa", {
+        direction: "top",
+        offset: [0, -17],
+      });
+    }
     state.markerById.set(feature.id, marker);
+  }
+}
+
+function getSpreadMarkerPosition(layout) {
+  const spreadRadiusPixels = 42;
+  const zoom = map.getZoom();
+  const basePoint = map.project(layout.basePosition, zoom);
+  const offset = L.point(
+    Math.cos(layout.angle) * spreadRadiusPixels,
+    Math.sin(layout.angle) * spreadRadiusPixels,
+  );
+  return map.unproject(basePoint.add(offset), zoom);
+}
+
+function updateApproximateMarkerPositions() {
+  for (const layout of state.approximateMarkerLayouts) {
+    const marker = state.markerById.get(layout.featureId);
+    if (marker) marker.setLatLng(getSpreadMarkerPosition(layout));
   }
 }
 

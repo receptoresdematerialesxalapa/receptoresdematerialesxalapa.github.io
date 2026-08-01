@@ -392,6 +392,44 @@ a:hover {
   font-size: 0.72rem;
 }
 
+.map-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.map-note__symbol,
+.approximate-marker {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #b96812;
+  font-weight: 900;
+}
+
+.map-note__symbol {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border: 2px dashed #ffffff;
+  box-shadow: 0 0 0 1px #b96812;
+  font-size: 1rem;
+}
+
+.approximate-marker {
+  width: 34px !important;
+  height: 34px !important;
+  border: 3px dashed #ffffff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 32%), 0 0 0 2px #8d4e0d;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.approximate-marker span {
+  transform: translateY(-1px);
+}
+
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
   color: var(--text);
