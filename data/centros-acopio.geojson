@@ -21,7 +21,7 @@
           "barter": false,
           "purchase": true,
           "donation": false,
-          "other": false 
+          "other": false
         },
         "schedule": {
           "display": null,
@@ -51,7 +51,7 @@
       "id": "centro-acopio-mendoza",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.5369447, -96.9245876]
+        "coordinates": [-96.9245876, 19.5369447]
       },
       "properties": {
         "name": "Centro de Acopio Mendoza",
@@ -96,7 +96,7 @@
       "id": "internacional-paper",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.548287977362076, -96.90740733013166]
+        "coordinates": [-96.90740733013166, 19.548287977362076]
       },
       "properties": {
         "name": "International Paper",
@@ -141,7 +141,7 @@
       "id": "fundacion-bizarro",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.525273108790774, -96.90021178788687]
+        "coordinates": [-96.90021178788687, 19.525273108790774]
       },
       "properties": {
         "name": "Fundación Bizarro, Reciclando por un Mejor Futuro, A.C.",
@@ -209,7 +209,7 @@
       "id": "centro-acopio-kotizame",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.528736096102858, -96.88807680682793]
+        "coordinates": [-96.88807680682793, 19.528736096102858]
       },
       "properties": {
         "name": "Centro de Acopio Kotízame",
@@ -335,7 +335,7 @@
       "id": "reciclables-mendoza",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.533792903398748, -96.93811275756414]
+        "coordinates": [-96.93811275756414, 19.533792903398748]
       },
       "properties": {
         "name": "Reciclables Mendoza",
@@ -382,7 +382,7 @@
       "id": "facultad-medicina",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.560160691664326, -96.93070196365886]
+        "coordinates": [-96.93070196365886, 19.560160691664326]
       },
       "properties": {
         "name": "Facultad de Medicina",
@@ -424,7 +424,7 @@
       "id": "caxa",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.5274407012927, -96.90349334076451]
+        "coordinates": [-96.90349334076451, 19.5274407012927]
       },
       "properties": {
         "name": "CAXA",
@@ -466,7 +466,7 @@
       "id": "bachillerato-articulo-3-constitucional",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.46203040675153, -96.95402067370713]
+        "coordinates": [-96.95402067370713, 19.46203040675153]
       },
       "properties": {
         "name": "Bachillerato Artículo 3.º Constitucional",
@@ -508,7 +508,7 @@
       "id": "talleres-libres-arte",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.523630521485458, -96.91169936709025]
+        "coordinates": [-96.91169936709025, 19.523630521485458]
       },
       "properties": {
         "name": "Talleres Libres de Arte",
