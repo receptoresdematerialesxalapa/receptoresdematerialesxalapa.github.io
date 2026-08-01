@@ -100,7 +100,7 @@
       },
       "properties": {
         "name": "International Paper",
-        "address": null,
+        "address": "Tren 101 SN, Hogares Ferrocarrileros, 91020 Xalapa, Ver.",
         "materials": [
           "archivo-blanco",
           "archivo-muerto",
@@ -391,7 +391,7 @@
       },
       "properties": {
         "name": "Facultad de Medicina",
-        "address": null,
+        "address": "Médicos & Odontologos, Virginia Cordero de Murillo Vidal, 91017 Xalapa-Enríquez, Ver.",
         "materials": [
           "tapas-plasticas-botellas"
         ],
@@ -433,7 +433,7 @@
       },
       "properties": {
         "name": "CAXA",
-        "address": null,
+        "address": "Av. 20 de Noviembre 271, Maria Esther, 91030 Xalapa-Enríquez, Ver.",
         "materials": [
           "tapas-plasticas-botellas"
         ],
@@ -475,7 +475,7 @@
       },
       "properties": {
         "name": "Bachillerato Artículo 3.º Constitucional",
-        "address": null,
+        "address": "C. Guillermo Prieto, Rincón Coatepec, Centro, 91500 Coatepec, Ver.",
         "materials": [
           "tapas-plasticas-botellas"
         ],
