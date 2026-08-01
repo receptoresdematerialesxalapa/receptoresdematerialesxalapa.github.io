@@ -6,11 +6,14 @@
       "id": "recolector-aceite-cocina",
       "geometry": {
         "type": "Point",
-        "coordinates": [0, 0]
+        "coordinates": [-96.9236, 19.5438]
       },
       "properties": {
         "name": "Recolector de aceite de cocina (sin nombre)",
         "address": null,
+        "locationPrecision": "city",
+        "serviceArea": "Xalapa, Veracruz",
+        "serviceMode": "pickup",
         "materials": [
           "aceite-cocina-usado"
         ],
@@ -39,7 +42,7 @@
           "facebook": null,
           "whatsapp": null
         },
-        "notes": "Puede recoger el aceite a partir de 20 litros.",
+        "notes": "La ubicación del marcador es representativa de Xalapa; no corresponde a un domicilio exacto. Puede recoger el aceite a domicilio a partir de 20 litros.",
         "sourceMapUrl": null
       }
     },
