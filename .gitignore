@@ -5,6 +5,7 @@
 .idea/
 .~lock*
 node_modules/
+dist/
 
 # Basic Jekyll gitignores (synchronize to Jekyll.gitignore)
 _site/
