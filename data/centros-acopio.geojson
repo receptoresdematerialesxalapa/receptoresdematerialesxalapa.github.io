@@ -528,13 +528,13 @@
           "other": false
         },
         "schedule": {
-          "display": null,
+          "display": "Lunes a viernes de 9:00 a 21:00",
           "weekly": {
-            "monday": [],
-            "tuesday": [],
-            "wednesday": [],
-            "thursday": [],
-            "friday": [],
+            "monday": [["09:00", "21:00"]],
+            "tuesday": [["09:00", "21:00"]],
+            "wednesday": [["09:00", "21:00"]],
+            "thursday": [["09:00", "21:00"]],
+            "friday": [["09:00", "21:00"]],
             "saturday": [],
             "sunday": []
           }
