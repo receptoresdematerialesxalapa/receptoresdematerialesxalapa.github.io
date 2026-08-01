@@ -1,34 +1,108 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <title>Centros de acopio en Xalapa</title>
+  <meta name="description" content="Consulta centros de acopio en Xalapa y filtra por material, día y horario de atención.">
+  <meta name="theme-color" content="#256d4a">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <meta property="og:title" content="Centros de acopio en Xalapa">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Mapa y directorio de centros de acopio en Xalapa.">
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://tile.openstreetmap.org">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#resultsList">Saltar a los resultados</a>
 
-  <h1>This is my header</h1>
-  <button id="myButton">Click me</button>
-  <p>You better click the button.</p>
-  <script src="js/app.js"></script>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">Directorio ciudadano</p>
+      <h1>Centros de acopio en Xalapa</h1>
+      <p>Encuentra dónde entregar materiales reciclables y otros residuos.</p>
+    </div>
+    <button class="button button--location" id="locationButton" type="button">
+      Usar mi ubicación
+    </button>
+  </header>
 
+  <main class="app-shell">
+    <aside class="sidebar" aria-label="Filtros y resultados">
+      <form class="filters" id="filtersForm">
+        <div class="filter-heading">
+          <h2>Filtrar centros</h2>
+          <button class="text-button" id="clearFiltersButton" type="button">Limpiar</button>
+        </div>
+
+        <div class="field field--wide">
+          <label for="searchInput">Buscar</label>
+          <input id="searchInput" name="search" type="search" placeholder="Nombre, dirección o material">
+        </div>
+
+        <div class="field">
+          <label for="materialSelect">Material</label>
+          <select id="materialSelect" name="material">
+            <option value="">Todos los materiales</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="daySelect">Día de atención</label>
+          <select id="daySelect" name="day">
+            <option value="">Cualquier día</option>
+            <option value="monday">Lunes</option>
+            <option value="tuesday">Martes</option>
+            <option value="wednesday">Miércoles</option>
+            <option value="thursday">Jueves</option>
+            <option value="friday">Viernes</option>
+            <option value="saturday">Sábado</option>
+            <option value="sunday">Domingo</option>
+          </select>
+        </div>
+
+        <label class="checkbox-field">
+          <input id="openNowCheckbox" name="openNow" type="checkbox">
+          <span>Mostrar sólo los que están abiertos ahora</span>
+        </label>
+      </form>
+
+      <div class="status-row">
+        <p id="resultsSummary" aria-live="polite">Cargando centros…</p>
+        <p class="location-status" id="locationStatus" aria-live="polite"></p>
+      </div>
+
+      <section class="results" id="resultsList" aria-label="Centros encontrados" aria-busy="true"></section>
+    </aside>
+
+    <section class="map-panel" aria-label="Mapa de centros de acopio">
+      <div id="map"></div>
+      <p class="map-note">Los marcadores indicados como “ubicación aproximada” representan cobertura general en Xalapa.</p>
+    </section>
+  </main>
+
+  <template id="emptyStateTemplate">
+    <div class="empty-state">
+      <h3>No encontramos centros</h3>
+      <p>Prueba con otro material, día o término de búsqueda.</p>
+    </div>
+  </template>
+
+  <noscript>
+    <p class="noscript-message">Este sitio necesita JavaScript para cargar el mapa y los centros de acopio.</p>
+  </noscript>
+
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="js/app.js"></script>
 </body>
 
 </html>

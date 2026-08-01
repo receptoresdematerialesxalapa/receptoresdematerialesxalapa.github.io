@@ -1,12 +1,15 @@
 {
-  "name": " ",
+  "name": "centros-acopio-xalapa",
   "version": "0.0.1",
-  "description": "",
+  "description": "Mapa estático de centros de acopio en Xalapa.",
   "private": true,
   "keywords": [
-    ""
+    "reciclaje",
+    "xalapa",
+    "leaflet",
+    "geojson"
   ],
-  "license": "",
+  "license": "MIT",
   "author": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

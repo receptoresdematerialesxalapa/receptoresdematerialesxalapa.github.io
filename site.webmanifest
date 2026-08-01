@@ -1,12 +1,13 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "Acopio Xalapa",
+  "name": "Centros de acopio en Xalapa",
   "icons": [{
     "src": "icon.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
-  "start_url": "/?utm_source=homescreen",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f6f4",
+  "theme_color": "#256d4a"
 }
