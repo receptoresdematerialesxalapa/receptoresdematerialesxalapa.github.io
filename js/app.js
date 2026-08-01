@@ -14,6 +14,7 @@ const elements = {
   searchInput: document.getElementById("searchInput"),
   materialSelect: document.getElementById("materialSelect"),
   daySelect: document.getElementById("daySelect"),
+  serviceSelect: document.getElementById("serviceSelect"),
   openNowCheckbox: document.getElementById("openNowCheckbox"),
   clearFiltersButton: document.getElementById("clearFiltersButton"),
   locationButton: document.getElementById("locationButton"),
@@ -86,6 +87,7 @@ function bindEvents() {
   elements.searchInput.addEventListener("input", () => applyFilters({ fitMap: false }));
   elements.materialSelect.addEventListener("change", () => applyFilters({ fitMap: true }));
   elements.daySelect.addEventListener("change", () => applyFilters({ fitMap: true }));
+  elements.serviceSelect.addEventListener("change", () => applyFilters({ fitMap: true }));
   elements.openNowCheckbox.addEventListener("change", () => applyFilters({ fitMap: true }));
   elements.clearFiltersButton.addEventListener("click", clearFilters);
   elements.locationButton.addEventListener("click", requestUserLocation);
@@ -162,6 +164,7 @@ function applyFilters({ fitMap }) {
   const query = normalizeText(elements.searchInput.value.trim());
   const materialId = elements.materialSelect.value;
   const selectedDay = elements.daySelect.value;
+  const selectedService = elements.serviceSelect.value;
   const openNow = elements.openNowCheckbox.checked;
 
   let filtered = state.features.filter((feature) => {
@@ -180,6 +183,7 @@ function applyFilters({ fitMap }) {
     if (query && !searchableText.includes(query)) return false;
     if (materialId && !properties.materials.includes(materialId)) return false;
     if (selectedDay && !hasScheduleOnDay(properties.schedule, selectedDay)) return false;
+    if (selectedService && properties.services?.[selectedService] !== true) return false;
     if (openNow && !isOpenNow(properties.schedule)) return false;
     return true;
   });
