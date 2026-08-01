@@ -148,7 +148,12 @@ function createMarkers() {
       title: feature.properties.name,
       alt: `Centro de acopio: ${feature.properties.name}`,
     });
-    marker.bindPopup(buildPopup(feature), { maxWidth: 330 });
+    marker.bindPopup(buildPopup(feature), {
+      minWidth: 250,
+      maxWidth: 340,
+      maxHeight: 420,
+      autoPanPadding: [24, 24],
+    });
     state.markerById.set(feature.id, marker);
   }
 }
@@ -354,22 +359,45 @@ function buildPopup(feature) {
   const materials = properties.materials
     .map((id) => state.materialsById.get(id)?.name || id)
     .map(escapeHtml)
-    .join(", ");
+    .map((name) => `<li>${name}</li>`)
+    .join("");
   const schedule = escapeHtml(properties.schedule?.display || "Horario no disponible");
   const address = escapeHtml(properties.address || properties.serviceArea || "Domicilio no disponible");
   const approximate = properties.locationPrecision === "city"
-    ? '<p><strong>Ubicación aproximada en Xalapa</strong></p>'
+    ? '<p class="popup__notice">Ubicación aproximada en Xalapa</p>'
     : "";
-  const notes = properties.notes ? `<p>${escapeHtml(properties.notes)}</p>` : "";
+  const activeServices = Object.entries(properties.services || {})
+    .filter(([, enabled]) => enabled)
+    .map(([service]) => SERVICE_LABELS[service] || service)
+    .map(escapeHtml)
+    .join(", ");
+  const services = activeServices
+    ? `<div class="popup__row"><dt>Modalidad</dt><dd>${activeServices}</dd></div>`
+    : "";
+  const notes = properties.notes
+    ? `<div class="popup__notes"><strong>Notas</strong><p>${escapeHtml(properties.notes)}</p></div>`
+    : "";
   const links = buildPopupLinks(properties);
 
   return `
     <div class="popup">
       <h3>${escapeHtml(properties.name)}</h3>
-      <p>${address}</p>
       ${approximate}
-      <p class="popup__materials">${materials}</p>
-      <p><strong>Horario:</strong> ${schedule}</p>
+      <dl class="popup__details">
+        <div class="popup__row">
+          <dt>Dirección</dt>
+          <dd>${address}</dd>
+        </div>
+        <div class="popup__row">
+          <dt>Residuos que recibe</dt>
+          <dd><ul class="popup__material-list">${materials}</ul></dd>
+        </div>
+        <div class="popup__row">
+          <dt>Horario</dt>
+          <dd>${schedule}</dd>
+        </div>
+        ${services}
+      </dl>
       ${notes}
       ${links}
     </div>
@@ -388,7 +416,9 @@ function buildPopupLinks(properties) {
   if (properties.social?.instagram) links.push(externalPopupLink(properties.social.instagram, "Instagram"));
   if (properties.social?.facebook) links.push(externalPopupLink(properties.social.facebook, "Facebook"));
   if (properties.sourceMapUrl) links.push(externalPopupLink(properties.sourceMapUrl, "Google Maps"));
-  return links.length ? `<p class="popup__links">${links.join("")}</p>` : "";
+  return links.length
+    ? `<div class="popup__links" aria-label="Contacto y enlaces">${links.join("")}</div>`
+    : "";
 }
 
 function externalPopupLink(url, label) {
