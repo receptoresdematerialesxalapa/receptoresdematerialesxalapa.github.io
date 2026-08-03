@@ -25,6 +25,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
@@ -90,6 +92,23 @@ a:hover {
   line-height: 1.2;
 }
 
+.site-brand {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-brand > div {
+  min-width: 0;
+}
+
+.site-logo {
+  width: clamp(58px, 7vw, 78px);
+  height: auto;
+  flex: 0 0 auto;
+}
+
 .site-header p:last-child {
   margin-top: 0.25rem;
   color: #d9e9df;
@@ -130,8 +149,24 @@ a:hover {
 .app-shell {
   display: grid;
   grid-template-columns: minmax(320px, 430px) minmax(0, 1fr);
-  height: calc(100vh - 98px);
+  flex: 1 1 580px;
   min-height: 580px;
+}
+
+.site-footer {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  background: var(--surface);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  font-weight: 700;
 }
 
 .sidebar {
@@ -617,6 +652,24 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+  .site-header {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .site-brand {
+    gap: 0.65rem;
+  }
+
+  .site-logo {
+    width: 48px;
+  }
+
+  .button--location {
+    width: 100%;
+  }
+
   .site-header h1 {
     font-size: 1.25rem;
   }

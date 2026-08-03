@@ -13,6 +13,7 @@ module.exports = merge(common, {
     new CopyPlugin({
       patterns: [
         { from: 'css', to: 'css' },
+        { from: 'img', to: 'img' },
         { from: 'data/*.json', to: 'data/[name][ext]' },
         { from: 'data/*.geojson', to: 'data/[name][ext]' },
         { from: 'icon.svg', to: 'icon.svg' },
