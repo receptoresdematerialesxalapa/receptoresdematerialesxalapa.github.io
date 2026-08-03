@@ -428,12 +428,26 @@ a:hover {
   background: rgb(255 255 255 / 94%);
   box-shadow: var(--shadow);
   font-size: 0.72rem;
+  display: grid;
+  gap: 0.45rem;
 }
 
-.map-note {
+.map-note__item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
+  margin: 0;
+}
+
+.map-note__item strong {
+  color: var(--text);
+}
+
+.map-note__exact {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .map-note__symbol,

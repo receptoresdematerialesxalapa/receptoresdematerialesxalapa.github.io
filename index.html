@@ -99,10 +99,16 @@
 
     <section class="map-panel" aria-label="Mapa de centros de acopio">
       <div id="map"></div>
-      <p class="map-note">
-        <span class="map-note__symbol" aria-hidden="true">≈</span>
-        <span>Ubicación aproximada: representa cobertura general en Xalapa, no un domicilio exacto.</span>
-      </p>
+      <div class="map-note" aria-label="Leyenda del mapa">
+        <p class="map-note__item">
+          <img class="map-note__exact" src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png" alt="">
+          <span><strong>Ubicación exacta:</strong> corresponde al domicilio registrado.</span>
+        </p>
+        <p class="map-note__item">
+          <span class="map-note__symbol" aria-hidden="true">≈</span>
+          <span><strong>Ubicación aproximada:</strong> representa cobertura general en Xalapa.</span>
+        </p>
+      </div>
     </section>
   </main>
 
